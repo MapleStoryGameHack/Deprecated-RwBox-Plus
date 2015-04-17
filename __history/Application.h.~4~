@@ -1,9 +1,0 @@
-//---------------------------------------------------------------------------
-
-#ifndef ApplicationH
-#define ApplicationH
-#include <vcl.h>
-
-extern "C" DWORD WINAPI FMXmain(LPVOID lpParameter);
-//---------------------------------------------------------------------------
-#endif
