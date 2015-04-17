@@ -1,0 +1,19 @@
+//---------------------------------------------------------------------------
+
+#ifndef ThreadBotH
+#define ThreadBotH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+//---------------------------------------------------------------------------
+class ThreadBot : public TThread
+{
+private:
+	queue<int> keysqueue;
+protected:
+	void __fastcall Execute();
+public:
+	__fastcall ThreadBot(bool CreateSuspended);
+
+};
+//---------------------------------------------------------------------------
+#endif

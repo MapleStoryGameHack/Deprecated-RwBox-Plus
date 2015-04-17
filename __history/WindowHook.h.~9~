@@ -1,0 +1,11 @@
+//---------------------------------------------------------------------------
+
+#ifndef WindowHookH
+#define WindowHookH
+#include <vcl.h>
+
+extern HWND hWndMS;
+
+void InstallWindowHook();
+//---------------------------------------------------------------------------
+#endif

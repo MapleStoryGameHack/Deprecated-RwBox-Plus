@@ -1,0 +1,59 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+#include <vcl.h>
+#include "Keys.h"
+//---------------------------------------------------------------------------
+
+TStrings * Keys;
+
+InitializeKeys()
+{
+	Keys  =  new TStringList;
+	Keys->Add(",");
+	Keys->Add(".");
+	Keys->Add("/");
+	Keys->Add("1");
+	Keys->Add("2");
+	Keys->Add("3");
+	Keys->Add("4");
+	Keys->Add("5");
+	Keys->Add("6");
+	Keys->Add("7");
+	Keys->Add("8");
+	Keys->Add("9");
+	Keys->Add("0");
+	Keys->Add("Del");
+	Keys->Add("A");
+	Keys->Add("A");
+	Keys->Add("A");
+	Keys->Add("A");
+	Keys->Add("A");
+	Keys->Add("B");
+	Keys->Add("C");
+	Keys->Add("D");
+	Keys->Add("E");
+	Keys->Add("F");
+	Keys->Add("G");
+	Keys->Add("H");
+	Keys->Add("I");
+	Keys->Add("J");
+	Keys->Add("K");
+	Keys->Add("L");
+	Keys->Add("M");
+	Keys->Add("N");
+	Keys->Add("O");
+	Keys->Add("P");
+	Keys->Add("Q");
+	Keys->Add("R");
+	Keys->Add("S");
+	Keys->Add("T");
+	Keys->Add("U");
+	Keys->Add("V");
+	Keys->Add("W");
+	Keys->Add("X");
+	Keys->Add("Y");
+	Keys->Add("Z");
+}
+
+#pragma package(smart_init)

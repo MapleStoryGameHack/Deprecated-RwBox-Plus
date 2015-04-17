@@ -1,0 +1,17 @@
+//---------------------------------------------------------------------------
+
+#ifndef ThreadMainH
+#define ThreadMainH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+//---------------------------------------------------------------------------
+class ThreadMain : public TThread
+{
+private:
+protected:
+	void __fastcall Execute();
+public:
+	__fastcall ThreadMain(bool CreateSuspended);
+};
+//---------------------------------------------------------------------------
+#endif

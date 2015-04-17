@@ -1,0 +1,57 @@
+//---------------------------------------------------------------------------
+#include <vcl.h>
+#include <windows.h>
+#pragma hdrstop
+
+#include "DllMain.h"
+#include "ThreadMain.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+
+ThreadMain *threadMain;
+HINSTANCE hinstDll;
+
+int StartThread(int a, int b)
+{
+	threadMain = new ThreadMain(false);
+	return a + b;
+}
+
+void RemoveThread()
+{
+	delete threadMain;
+}
+
+typedef struct ReggaeInterface
+{
+	int (*StartThread)(int, int);
+	void (*RemoveThread)();
+} ReggaeInterface;
+
+ReggaeInterface dllInterface =
+{
+	StartThread,
+	RemoveThread
+};
+
+extern "C" __declspec(dllexport) ReggaeInterface* GetDLLInterface(int a, int b)
+{
+	return &dllInterface;
+}
+//---------------------------------------------------------------------------
+
+BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fwdreason, LPVOID lpvReserved)
+{
+	if (fwdreason == DLL_PROCESS_ATTACH)
+	{
+		::hinstDll = hinstDll;
+
+	}
+	else if (fwdreason == DLL_PROCESS_DETACH)
+	{
+
+	}
+	return 1;
+}
+//---------------------------------------------------------------------------
+

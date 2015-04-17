@@ -1,0 +1,18 @@
+//---------------------------------------------------------------------------
+
+#ifndef ThreadMainH
+#define ThreadMainH
+//---------------------------------------------------------------------------
+
+//---------------------------------------------------------------------------
+class ThreadMain : public TThread
+{
+private:
+	void __fastcall RefreshData();
+protected:
+	void __fastcall Execute();
+public:
+	__fastcall ThreadMain(bool CreateSuspended);
+};
+//---------------------------------------------------------------------------
+#endif

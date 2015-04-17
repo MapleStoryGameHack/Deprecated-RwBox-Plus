@@ -1,0 +1,26 @@
+//---------------------------------------------------------------------------
+
+#ifndef FormTaxiH
+#define FormTaxiH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <FMX.Controls.hpp>
+#include <FMX.Forms.hpp>
+#include <FMX.Types.hpp>
+#include <FMX.ListBox.hpp>
+//---------------------------------------------------------------------------
+class TfrmTaxi : public TForm
+{
+__published:	// IDE-managed Components
+	TStyleBook *style;
+	TComboBox *ComboBox1;
+	TLabel *Label1;
+	TButton *btn_go;
+private:	// User declarations
+public:		// User declarations
+	__fastcall TfrmTaxi(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TfrmTaxi *frmTaxi;
+//---------------------------------------------------------------------------
+#endif
